@@ -1,0 +1,65 @@
+﻿<Window x:Class="LABA3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LABA3"
+        mc:Ignorable="d"
+        Title="Лабораторная работа 3 Горностаев Д. В. ИБ-21б" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Content="Запуск" Width="100" Height="30" Margin="10" Click="RunTasks" HorizontalAlignment="Center" />
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="A" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadA}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="B" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadB}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="D" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadD}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="3">
+                <TextBlock Text="E" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadE}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="4">
+                <TextBlock Text="C" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadC}" />
+            </StackPanel>
+            
+            <StackPanel Grid.Column="5">
+                <TextBlock Text="G" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadG}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="6">
+                <TextBlock Text="F" FontWeight="Bold" HorizontalAlignment="Center" />
+                <ListBox ItemsSource="{Binding ThreadF}" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
